@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Детская игровая «Забава» | Детские праздники в Курске</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lg-thumbnail.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lg-zoom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shantell+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <img src="img/logo.png" alt="Забава">
+        </a>
+        <div class="nav">
+            <a href="#about">О нас</a>
+            <a href="#packages">Пакеты</a>
+            <a href="#activities">Услуги</a>
+            <a href="#gallery">Фото</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+        <div class="header-contacts">
+            <a href="tel:+79038778800" class="header-phone"><i class="fas fa-phone-alt"></i> +7 (903) 877-88-00</a>
+            <div class="messenger-icons">
+                <a href="#" class="messenger-icon"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" class="messenger-icon">
+                    <svg width="20" height="20" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="white" d="M350.4,9.6C141.8,20.5,4.1,184.1,12.8,390.4c3.8,90.3,40.1,168,48.7,253.7,2.2,22.2-4.2,49.6,21.4,59.3,31.5,11.9,79.8-8.1,106.2-26.4,9-6.1,17.6-13.2,24.2-22,27.3,18.1,53.2,35.6,85.7,43.4,143.1,34.3,299.9-44.2,369.6-170.3C799.6,291.2,622.5-4.6,350.4,9.6h0ZM269.4,504c-11.3,8.8-22.2,20.8-34.7,27.7-18.1,9.7-23.7-.4-30.5-16.4-21.4-50.9-24-137.6-11.5-190.9,16.8-72.5,72.9-136.3,150-143.1,78-6.9,150.4,32.7,183.1,104.2,72.4,159.1-112.9,316.2-256.4,218.6h0Z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <button class="burger-btn" id="burgerBtn">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- Мобильное меню -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <button class="mobile-close-btn" id="mobileCloseBtn">&times;</button>
+    </div>
+    <a href="#about">О нас</a>
+    <a href="#packages">Пакеты</a>
+    <a href="#activities">Услуги</a>
+    <a href="#gallery">Фото</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#contacts">Контакты</a>
+     <div class="mobile-address">
+        <i class="fas fa-map-marker-alt"></i> г. Курск, пр-т Анатолия Дериглазова 1Б
+    </div>
+    <div class="mobile-contacts">
+        <a href="tel:+79038778800"><i class="fas fa-phone-alt"></i> +7 (903) 877-88-00</a>
+        <a href="#"><i class="fab fa-telegram-plane"></i> Telegram</a>
+        <a href="#">
+            <svg width="18" height="18" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M350.4,9.6C141.8,20.5,4.1,184.1,12.8,390.4c3.8,90.3,40.1,168,48.7,253.7,2.2,22.2-4.2,49.6,21.4,59.3,31.5,11.9,79.8-8.1,106.2-26.4,9-6.1,17.6-13.2,24.2-22,27.3,18.1,53.2,35.6,85.7,43.4,143.1,34.3,299.9-44.2,369.6-170.3C799.6,291.2,622.5-4.6,350.4,9.6h0ZM269.4,504c-11.3,8.8-22.2,20.8-34.7,27.7-18.1,9.7-23.7-.4-30.5-16.4-21.4-50.9-24-137.6-11.5-190.9,16.8-72.5,72.9-136.3,150-143.1,78-6.9,150.4,32.7,183.1,104.2,72.4,159.1-112.9,316.2-256.4,218.6h0Z"/>
+            </svg>
+            Макс
+        </a>
+        <a href="#"><i class="fab fa-vk"></i> ВКонтакте</a>
+    </div>
+</div>
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="img/bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fa-solid fa-location-dot"></i> г. Курск, пр-т Дериглазова 1Б</div>
+                <img src="img/logo.png">
+                <h1>Детская игровая</h1>
+                <p>Проведите день рождения ребёнка в Курске весело, безопасно и недорого. Ищете, где отметить детский праздник? Приходите к нам!</p>
+                <div class="hero-buttons">
+                    <a href="#contacts" class="btn btn-accent"><i class="fa-solid fa-cake-candles"></i> Забронировать</a>
+                    <a href="#prices" class="btn btn-outline"><i class="fa-solid fa-tag"></i> Цены</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЧТО МЫ ПРЕДЛАГАЕМ -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Что мы предлагаем</h2>
+            <div class="services-grid">
+                <div class="polaroid-card animate-on-scroll" data-modal="prazdnik"><div class="polaroid-img" style="background-image: url('img/prazd.jpg');"></div><div class="polaroid-title">Праздники под ключ</div><div class="polaroid-text">Дни рождения, выпускные — с аниматором и банкетом</div></div>
+                <div class="polaroid-card animate-on-scroll" data-modal="animator"><div class="polaroid-img" style="background-image: url('img/anim.jpg');"></div><div class="polaroid-title">Аниматоры</div><div class="polaroid-text">Сценарии от 3 до 12 лет. Профессиональные ведущие</div></div>
+                <div class="polaroid-card animate-on-scroll" data-modal="banket"><div class="polaroid-img" style="background-image: url('img/banket.jpg');"></div><div class="polaroid-title">Банкетная комната</div><div class="polaroid-text">Панорамное окно, мягкие стульчики, диван, трон</div></div>
+                <div class="polaroid-card animate-on-scroll" data-modal="aktiv"><div class="polaroid-img" style="background-image: url('img/batutu.jpg');"></div><div class="polaroid-title">Активности</div><div class="polaroid-text">Батут с горками, спортивный батут, лабиринт, сухой бассейн</div></div>
+                <div class="polaroid-card animate-on-scroll" data-modal="master"><div class="polaroid-img" style="background-image: url('img/master.jpg');"></div><div class="polaroid-title">Мастер-классы</div><div class="polaroid-text">Слаймы, сладкая вата, аквагрим, блеск-тату</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЦЕНЫ -->
+    <section id="prices" class="section section-light">
+        <div class="container">
+            <h2>Стоимость пребывания</h2>
+            <div class="price-cards">
+                <div class="price-item animate-on-scroll"><div class="hours"><i class="far fa-clock"></i> 1 час</div><div class="cost">500 ₽</div><div><i class="fas fa-users"></i> 2 взрослых бесплатно</div></div>
+                <div class="price-item animate-on-scroll"><div class="hours"><i class="far fa-clock"></i> 2 часа</div><div class="cost">750 ₽</div><div><i class="fas fa-users"></i> 2 взрослых бесплатно</div></div>
+                <div class="price-item animate-on-scroll package-link-card">
+                    <div class="hours">Пакетные предложения</div>
+                    <div class="cost">от 15 900 ₽</div>
+                    <a href="#packages" class="btn-package-link">Подробнее →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПАКЕТНЫЕ ПРЕДЛОЖЕНИЯ -->
+    <section id="packages" class="section">
+        <div class="container">
+            <h2>Пакетные предложения</h2>
+            <div class="packages-grid">
+                <div class="package-card animate-on-scroll" data-modal="standart"><div class="package-header"><img src="img/icon_1.png" class="pack-icon" alt="">СТАНДАРТ</div><div class="package-body"><div class="package-price">15 900 ₽</div><button class="package-btn">Подробнее <i class="fas fa-arrow-right"></i></button></div></div>
+                <div class="package-card animate-on-scroll" data-modal="popular"><div class="package-header accent"><img src="img/icon_2.png" class="pack-icon" alt="">ПОПУЛЯРНЫЙ</div><div class="package-body"><div class="package-price">18 900 ₽</div><button class="package-btn">Подробнее <i class="fas fa-arrow-right"></i></button></div></div>
+                <div class="package-card animate-on-scroll" data-modal="bezkhlopot"><div class="package-header"><img src="img/icon_3.png" class="pack-icon" alt="">БЕЗ ХЛОПОТ</div><div class="package-body"><div class="package-price">22 500 ₽</div><button class="package-btn">Подробнее <i class="fas fa-arrow-right"></i></button></div></div>
+                <div class="package-card animate-on-scroll" data-modal="samiy"><div class="package-header accent"><img src="img/icon_4.png" class="pack-icon" alt="">САМЫЙ-САМЫЙ</div><div class="package-body"><div class="package-price">41 000 ₽</div><button class="package-btn">Подробнее <i class="fas fa-arrow-right"></i></button></div></div>
+                <div class="package-card animate-on-scroll" data-modal="arend2"><div class="package-header"><img src="img/icon_6.png" class="pack-icon" alt="">Банкетная комната 2ч</div><div class="package-body"><div class="package-price">8 000 ₽</div><button class="package-btn">Уточнить</button></div></div>
+                <div class="package-card animate-on-scroll" data-modal="arend3"><div class="package-header accent"><img src="img/icon_5.png" class="pack-icon" alt="">Банкетная комната 3ч</div><div class="package-body"><div class="package-price">11 900 ₽</div><button class="package-btn">Уточнить</button></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ДОП УСЛУГИ -->
+    <section id="activities" class="section section-light">
+        <div class="container">
+            <h2>Дополнительные услуги</h2>
+            <div class="activities-grid">
+                <div class="activity-item animate-on-scroll" data-modal="nerf"><span class="activity-name"><i class="fa-solid fa-gun"></i> Нёрф вечеринка</span><span class="activity-price">4 000 ₽</span></div>
+                <div class="activity-item animate-on-scroll" data-modal="interaktiv"><span class="activity-name"><i class="fas fa-gamepad"></i> Интерактивные игры</span><span class="activity-price">3 500 ₽</span></div>
+                <div class="activity-item animate-on-scroll" data-modal="disco"><span class="activity-name"><i class="fas fa-music"></i> Неоновая дискотека</span><span class="activity-price">3 400 ₽</span></div>
+                <div class="activity-item animate-on-scroll" data-modal="beauty"><span class="activity-name"><i class="fas fa-spa"></i> Бьюти-бар</span><span class="activity-price">5 500 ₽</span></div>
+                <div class="activity-item animate-on-scroll" data-modal="crio"><span class="activity-name"><i class="fas fa-snowflake"></i> Крио-шоу</span><span class="activity-price">5 000 ₽</span></div>
+                <div class="activity-item animate-on-scroll" data-modal="foto"><span class="activity-name"><i class="fas fa-camera"></i> Фотограф</span><span class="activity-price">5 000 ₽</span></div>
+                <div class="activity-item animate-on-scroll" data-modal="rost"><span class="activity-name"><i class="fa-solid fa-mask"></i> Ростовые куклы</span><span class="activity-price">3 000 ₽</span></div>
+                <div class="activity-item animate-on-scroll" data-modal="chocolate"><span class="activity-name"><i class="fa-solid fa-cookie-bite"></i> Шоколадный фонтан</span><span class="activity-price">6 000 ₽</span></div>
+                <div class="activity-item animate-on-scroll" data-modal="slime"><span class="activity-name"><i class="fas fa-flask"></i> МК по слайму</span><span class="activity-price">3 000 ₽</span></div>
+                <div class="activity-item animate-on-scroll" data-modal="vata"><span class="activity-name"><i class="fas fa-candy-cane"></i> МК по сладкой вате</span><span class="activity-price">2 000 ₽</span></div>
+                <div class="activity-item animate-on-scroll" data-modal="blesk"><span class="activity-name"><i class="fas fa-star-of-life"></i> Блеск-тату</span><span class="activity-price">150 ₽</span></div>
+                <div class="activity-item animate-on-scroll" data-modal="aqua"><span class="activity-name"><i class="fas fa-paint-brush"></i> Аквагрим</span><span class="activity-price">300 ₽</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ С ЛАЙТРУМОМ -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Фотогаллерея</h2>
+            <div class="gallery-grid" id="galleryGrid" data-gallery-folders='["deriglazova1","deriglazova2","deriglazova3","deriglazova4","deriglazova5","deriglazova6"]'></div>
+        </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section id="reviews" class="section section-light">
+        <div class="container">
+            <h2>Отзывы гостей</h2>
+            <div class="reviews-swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><div class="review-text">Сын в восторге от лабиринта и батутов! Отпраздновали день рождения, аниматоры супер, всё организовали идеально.</div><div class="review-author"><i class="fas fa-user-circle"></i> Мария, мама Артёма</div></div></div>
+                    <div class="swiper-slide"><div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><div class="review-text">Очень просторно, чисто, много зон. Банкетная комната — всё продумано для детей и родителей. Придём ещё!</div><div class="review-author"><i class="fas fa-user-circle"></i> Семья Кузнецовых</div></div></div>
+                    <div class="swiper-slide"><div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><div class="review-text">Водили класс на выпускной. Дети были счастливы, родители спокойны. Рекомендую, хорошие пакеты.</div><div class="review-author"><i class="fas fa-user-circle"></i> Елена Викторовна</div></div></div>
+                    <div class="swiper-slide"><div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><div class="review-text">Отметили 5 лет дочке — всё прошло супер! Аниматоры зажгли, спасибо!</div><div class="review-author"><i class="fas fa-user-circle"></i> Анна</div></div></div>
+                    <div class="swiper-slide"><div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><div class="review-text">Уже второй раз заказываем праздник. Всё в одном месте — удобно!</div><div class="review-author"><i class="fas fa-user-circle"></i> Екатерина</div></div></div>
+                    <div class="swiper-slide"><div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><div class="review-text">Приходили просто поиграть на 2 часа. Ребёнок напрыгался, отличное место!</div><div class="review-author"><i class="fas fa-user-circle"></i> Дмитрий</div></div></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section id="contacts" class="section">
+        <div class="container">
+            <h2>Свяжитесь с нами</h2>
+            <div class="contact-block">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Телефон</h3>
+                    <a href="tel:+79038778800" class="contact-link">+7 (903) 877-88-00</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-telegram"></i></div>
+                    <h3>Telegram</h3>
+                    <a href="#" class="contact-link">@zabava_kursk</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg width="40" height="40" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="var(--color-teal)" d="M350.4,9.6C141.8,20.5,4.1,184.1,12.8,390.4c3.8,90.3,40.1,168,48.7,253.7,2.2,22.2-4.2,49.6,21.4,59.3,31.5,11.9,79.8-8.1,106.2-26.4,9-6.1,17.6-13.2,24.2-22,27.3,18.1,53.2,35.6,85.7,43.4,143.1,34.3,299.9-44.2,369.6-170.3C799.6,291.2,622.5-4.6,350.4,9.6h0ZM269.4,504c-11.3,8.8-22.2,20.8-34.7,27.7-18.1,9.7-23.7-.4-30.5-16.4-21.4-50.9-24-137.6-11.5-190.9,16.8-72.5,72.9-136.3,150-143.1,78-6.9,150.4,32.7,183.1,104.2,72.4,159.1-112.9,316.2-256.4,218.6h0Z"/>
+                        </svg>
+                    </div>
+                    <h3>Макс</h3>
+                    <a href="#" class="contact-link">Написать</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-vk"></i></div>
+                    <h3>ВКонтакте</h3>
+                    <a href="#" class="contact-link">Сообщество</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- КАРТА ВО ВСЮ ШИРИНУ -->
+<section class="map-fullwidth">
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa449626942fd479ab7564c3ede2cc4f522bb398c59be7f698f5c72cb622fa5a5&amp;source=constructor" width="100%" height="700" frameborder="0"></iframe>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 Детская игровая «Забава» | Курск</p>
+        <p>Батуты, лабиринт, аниматоры, банкетная комната — всё для счастливого детства</p>
+        <p><a href="tel:+79038778800">+7 (903) 877-88-00</a> | пр-т Анатолия Дериглазова 1Б</p>
+    </div>
+</footer>
+
+<!-- МОДАЛЬНОЕ ОКНО -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-close">&times;</div>
+        <img id="modalImg" class="modal-img" src="" alt="">
+        <div class="modal-body">
+            <h3 id="modalTitle" class="modal-title"></h3>
+            <div id="modalPrice" class="modal-price"></div>
+            <div id="modalDesc" class="modal-description"></div>
+            <div class="modal-buttons">
+                <a href="tel:+79038778800" class="modal-btn phone"><i class="fas fa-phone-alt"></i> Позвонить</a>
+                <a href="#" class="modal-btn telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                <a href="#" class="modal-btn max">
+                    <svg width="18" height="18" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="white" d="M350.4,9.6C141.8,20.5,4.1,184.1,12.8,390.4c3.8,90.3,40.1,168,48.7,253.7,2.2,22.2-4.2,49.6,21.4,59.3,31.5,11.9,79.8-8.1,106.2-26.4,9-6.1,17.6-13.2,24.2-22,27.3,18.1,53.2,35.6,85.7,43.4,143.1,34.3,299.9-44.2,369.6-170.3C799.6,291.2,622.5-4.6,350.4,9.6h0ZM269.4,504c-11.3,8.8-22.2,20.8-34.7,27.7-18.1,9.7-23.7-.4-30.5-16.4-21.4-50.9-24-137.6-11.5-190.9,16.8-72.5,72.9-136.3,150-143.1,78-6.9,150.4,32.7,183.1,104.2,72.4,159.1-112.9,316.2-256.4,218.6h0Z"/>
+                    </svg>
+                    Макс
+                </a>
+                <a href="#" class="modal-btn vk"><i class="fab fa-vk"></i> ВКонтакте</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Мобильный фиксированный виджет (круглые иконки справа) -->
+<div class="mobile-fixed-widget">
+    <a href="tel:+79038778800" class="widget-btn phone">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+    <a href="#" class="widget-btn telegram">
+        <i class="fab fa-telegram-plane"></i>
+    </a>
+    <a href="#" class="widget-btn max">
+        <svg width="22" height="22" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="white" d="M350.4,9.6C141.8,20.5,4.1,184.1,12.8,390.4c3.8,90.3,40.1,168,48.7,253.7,2.2,22.2-4.2,49.6,21.4,59.3,31.5,11.9,79.8-8.1,106.2-26.4,9-6.1,17.6-13.2,24.2-22,27.3,18.1,53.2,35.6,85.7,43.4,143.1,34.3,299.9-44.2,369.6-170.3C799.6,291.2,622.5-4.6,350.4,9.6h0ZM269.4,504c-11.3,8.8-22.2,20.8-34.7,27.7-18.1,9.7-23.7-.4-30.5-16.4-21.4-50.9-24-137.6-11.5-190.9,16.8-72.5,72.9-136.3,150-143.1,78-6.9,150.4,32.7,183.1,104.2,72.4,159.1-112.9,316.2-256.4,218.6h0Z"/>
+        </svg>
+    </a>
+</div>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

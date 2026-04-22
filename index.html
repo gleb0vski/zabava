@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Забава | Детские игровые комнаты в Курске</title>
+    <meta name="description" content="Детские игровые комнаты «Забава» в Курске. Выберите удобный для вас адрес: пр-т Дериглазова 1Б или ТЦ Европа 50.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Shantell+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary-blue: #2C4E94;
+            --color-teal: #00A6B6;
+            --color-orange: #FF5B33;
+            --color-gold: #FF9E18;
+            --color-mint: #55947F;
+            --color-pink: #F2727E;
+            --color-bg-light: #F8FAFC;
+            --color-white: #FFFFFF;
+            --color-border: #E2E8F0;
+            --color-text-muted: #5B6C7E;
+            --shadow-polaroid: 0 20px 30px -12px rgba(0, 0, 0, 0.2);
+            --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            --border-radius-lg: 28px;
+            --border-radius-md: 20px;
+            --border-radius-sm: 14px;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: var(--color-primary-blue);
+            line-height: 1.4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 24px;
+            position: relative;
+        }
+
+        /* Видеофон */
+        .hero-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        .hero-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(44,78,148,0.85) 0%, rgba(0,166,182,0.75) 100%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Логотип */
+        .logo-wrapper {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-wrapper img {
+            max-width: 600px;
+            height: auto;
+            display: inline-block;
+        }
+
+        /* Описание */
+        .description {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .description h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 12px;
+            font-family: 'Shantell Sans', cursive;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .description p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        /* Карточки выбора (Polaroid-стиль) */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .location-card {
+            background: var(--color-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-polaroid);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            padding: 0;
+        }
+        .location-card:nth-child(odd) {
+            transform: rotate(-1.2deg);
+        }
+        .location-card:nth-child(even) {
+            transform: rotate(1.2deg);
+        }
+        .location-card:hover {
+            transform: rotate(0deg) translateY(-8px);
+            box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.25);
+        }
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .card-img::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+            pointer-events: none;
+        }
+        .card-content {
+            padding: 20px 20px 25px;
+            text-align: center;
+        }
+        .card-content h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--color-primary-blue);
+        }
+        .address {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            margin-bottom: 8px;
+        }
+        .address i {
+            color: var(--color-teal);
+            width: 18px;
+        }
+        .phone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-teal);
+            margin-top: 12px;
+        }
+        .btn-card {
+            display: inline-block;
+            text-align: center;
+            background: var(--color-teal);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-top: 18px;
+            transition: all 0.2s;
+        }
+        .location-card:hover .btn-card {
+            background: var(--color-orange);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 16px;
+            }
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .description h1 {
+                font-size: 1.8rem;
+            }
+            .description p {
+                font-size: 0.95rem;
+            }
+            .location-card:nth-child(odd),
+            .location-card:nth-child(even) {
+                transform: rotate(0deg);
+            }
+            .card-img {
+                height: 160px;
+            }
+            .logo-wrapper img {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Видеофон -->
+<video class="hero-video" autoplay muted loop playsinline>
+    <source src="img/bg.mp4" type="video/mp4">
+</video>
+<div class="hero-overlay"></div>
+
+<div class="container">
+    <!-- Логотип -->
+    <div class="logo-wrapper">
+        <img src="img/logo.png" alt="Забава">
+    </div>
+
+    <!-- Описание -->
+    <div class="description">
+        <h1>Детские игровые комнаты</h1>
+        <p>Выберите удобный для вас адрес в Курске</p>
+    </div>
+
+    <!-- Карточки с филиалами -->
+    <div class="cards-grid">
+        <!-- Филиал 1: Дериглазова 1Б -->
+        <a href="zabava.html" class="location-card">
+            <div class="card-img" style="background-image: url('img/photo/deriglazova2/2.jpg');"></div>
+            <div class="card-content">
+                <h3>Забава на Дериглазова</h3>
+                <div class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>пр-т Анатолия Дериглазова, 1Б</span>
+                </div>
+                <div class="phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+7 (903) 877-88-00</span>
+                </div>
+                <div class="btn-card">
+                    Выбрать <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+        </a>
+
+        <!-- Филиал 2: Карла Маркса 10, ТЦ Европа 50 -->
+        <a href="europa50.html" class="location-card">
+            <div class="card-img" style="background-image: url('img/photo2/1.jpg');"></div>
+            <div class="card-content">
+                <h3>Забава в Европе 50</h3>
+                <div class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>ул. Карла Маркса 10, ТЦ Европа 50, 3 этаж</span>
+                </div>
+                <div class="phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+7 (903) 877-88-22</span>
+                </div>
+                <div class="btn-card">
+                    Выбрать <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
