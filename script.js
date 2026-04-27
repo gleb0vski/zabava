@@ -185,13 +185,27 @@ const modalData = {
     }
 };
 
+// СПИСОК ID ПАКЕТНЫХ ПРЕДЛОЖЕНИЙ (У НИХ НЕ БУДЕТ КАРТИНКИ)
+const packageIds = ['standart', 'popular', 'bezkhlopot', 'samiy', 'arend2', 'arend3'];
+
 function openModal(id) {
     const data = modalData[id];
     if (data) {
         modalTitle.textContent = data.title;
         modalPrice.textContent = data.price;
         modalDesc.innerHTML = data.desc;
-        modalImg.src = data.img;
+        
+        // Проверяем, является ли текущая модалка пакетом
+        if (packageIds.includes(id)) {
+            // Для пакетов — скрываем картинку и убираем её src
+            modalImg.style.display = 'none';
+            modalImg.src = '';
+        } else {
+            // Для доп. услуг — показываем картинку и ставим src
+            modalImg.style.display = 'block';
+            modalImg.src = data.img;
+        }
+        
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
